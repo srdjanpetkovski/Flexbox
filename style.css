@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --bodyFont: 'Roboto', sans-serif;
+    --font: 19px;
+    --bodyColor:#777;
+    --white: #fff;
+    --blue: #4f9ec5;
+    --lightGray: #eee;
+    --gray: #444;
+    --padding: 100px 0;
+    --transition: .3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    color: var(--bodyColor);
+    line-height: 2;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px 30px;
+    font-size: .8rem;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 20px 20px 20px 0;
+    border: none;
+}
+
+button:hover {
+    background: var(--gray);
+    transition: var(--transition);
+}
+
+img {
+    width: 100%;
+}
+
+/********** header **********/
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(255,255,255,.99)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid var(--blue);
+}
+
+header h1 {
+    font-size: 6rem;
+    color: var(--white);
+    text-shadow: 2px 2px var(--gray);
+}
+
+header p {
+    font-size: 2rem;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+/********** intro **********/
+
+.intro {
+    text-align: center;
+    padding: var(--padding);
+}
+
+.intro i {
+    font-size: 3rem;
+    color: var(--blue);
+}
+
+.intro .row:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.intro .col {
+    flex: 0 0 30%;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.intro hr {
+    background: var(--lightGray);
+    border: none;
+    height: 1px;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.intro h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/********** blog **********/
+
+.blog {
+    padding: var(--padding);
+    background: var(--lightGray);
+}
+.blog .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog .col {
+    flex: 0 0 47%;
+}
+
+.blog img {
+    border-radius: 50px 50px 50px 0;
+    box-shadow: 4px 4px var(--blue);
+}
+
+/********** footer **********/
+
+footer {
+    text-align: center;
+    padding: var(--padding);
+    background: var(--gray);
+    color: var(--lightGray);
+}
+
+footer a {
+    font-size: 2rem;
+    color: var(--blue);
+    margin: 10px;
+}
+
+footer hr {
+    border: none;
+    background: var(--bodyColor);
+    height: 1px;
+    margin: 30px auto;
+    width: 50%;
+}
+
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    .button-mobile {
+        margin-bottom: 30px;
+    }
+
+    .blog button {
+        position: relative;
+        left: 98px;
+    }
+
+    .intro .col,
+    .blog .col {
+        flex: 0 0 100%;
+    }
+}
